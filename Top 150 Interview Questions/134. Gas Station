@@ -1,0 +1,15 @@
+class Solution:
+    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        tank = 0
+        maxlen = 0
+        for i in range(len(gas)*2):
+            tank = tank + gas[i%len(gas)] - cost[i%len(gas)]
+            if tank >= 0:
+                maxlen += 1
+            else:
+                maxlen = 0
+            tank = max(tank,0)
+        if maxlen >= len(gas):
+            return len(gas)*2 - maxlen
+        else:
+            return -1
