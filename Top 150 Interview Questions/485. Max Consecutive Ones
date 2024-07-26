@@ -1,0 +1,9 @@
+max_len = 0
+len_1 = 0
+for i in range(0,len(nums)):
+    if nums[i] == 1:
+        len_1 += 1
+        max_len = max(max_len,len_1)
+    else:  
+        len_1 = 0
+return max_len
