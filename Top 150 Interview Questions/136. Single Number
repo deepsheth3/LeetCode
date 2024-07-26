@@ -1,0 +1,3 @@
+ideal_sum = sum(set(nums))*2
+actual_sum = sum(nums)
+return ideal_sum - actual_sum
