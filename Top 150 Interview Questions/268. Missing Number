@@ -1,0 +1,5 @@
+sum_nums = sum(nums)
+ideal_sum = 0
+for i in range(1,len(nums)+1):
+    ideal_sum += i
+return ideal_sum - sum_nums
