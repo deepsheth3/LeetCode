@@ -1,0 +1,11 @@
+max_length=0
+prefix_sum=0
+sum_index_map={0:-1}
+for i in range(n):
+    prefix_sum+=arr[i]
+    
+    if (prefix_sum-k) in sum_index_map:
+        max_length=max(max_length,i-sum_index_map[prefix_sum-k])
+    if prefix_sum not in sum_index_map:
+        sum_index_map[prefix_sum]=i
+return max_length
