@@ -1,0 +1,4 @@
+max_sum = float('-inf')
+for num1,num2 in zip(arr,arr[1:]):
+    max_sum = max(max_sum,num1+num2)
+return max_sum
